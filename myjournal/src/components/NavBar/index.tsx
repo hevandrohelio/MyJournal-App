@@ -26,7 +26,16 @@ export function NavBar() {
                     <button onClick={createRoutine} className="createRoutineButton h-15 w-15 bg-neutral-600 rounded-sm ml-5 border-1 border-neutral-200 hover:bg-neutral-700">+</button>
                 </nav>
                 {/* This text show the actual date and time */}
-                <h1 className="text-center">{date.toLocaleString()}</h1>
+                <h1 className="text-center text-[42px]">{date.toLocaleString(
+                    'pt-BR',
+                    {   hour: '2-digit',
+                        minute: '2-digit',
+                        day: '2-digit',
+                        month: '2-digit',
+                        year: 'numeric',
+                        hour12: false,
+                    }
+                )}</h1>
                 {/* Notes and views */}
                 <nav className="flex">
                     <button className="openNotesButton bg-neutral-600 w-35 h-15 rounded-sm border-1 border-neutral-200 hover:bg-neutral-700">Notes</button>
