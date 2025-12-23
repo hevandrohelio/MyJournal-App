@@ -16,9 +16,9 @@ export function NavBar() {
     }
     let date = new Date();
     return (
-        <section>
+        <section className="sticky top-0 z-50 bg-background">
             {/* Navigation */}
-            <div className="flex flex-row justify-between sticky top-0 z-50 bg-background">
+            <div className="flex flex-row justify-between">
                 {/* Settings, routines and add routine */}
                 <nav>
                     <button onClick={navButton} className="navButton bg-neutral-600 w-25 h-15 rounded-sm border-1 border-neutral-200 hover:bg-neutral-700">≡</button>
