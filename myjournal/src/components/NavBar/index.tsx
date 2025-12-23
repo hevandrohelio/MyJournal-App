@@ -16,7 +16,7 @@ export function NavBar() {
     }
     let date = new Date();
     return (
-        <section className="sticky top-0 z-50 bg-background">
+        <section className="sticky top-0 z-50 bg-background border-b">
             {/* Navigation */}
             <div className="flex flex-row justify-between">
                 {/* Settings, routines and add routine */}

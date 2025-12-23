@@ -1,7 +1,7 @@
 'use client'
 export function WeekView() {
     /* Column */
-    const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     /* Time from 00:00 to 23:30 */
     /* How this thing works:
     hour variable receive a 48 positions array. (_,i) -> (item value, index)
@@ -18,7 +18,46 @@ export function WeekView() {
     console.log(hours);
 
     return (
-        <section>
+        <section className="mt-10">
+            <div
+                className="grid border"
+                style={{
+                    gridTemplateColumns: '80px repeat(7, 1fr)',
+                    gridTemplateRows: `40px repeat(${hours.length}, 40px)`
+                }}
+            >
+                {/* Header */}
+                <div></div>
+                {days.map(day => (
+                    <div
+                        key={day}
+                        className="border text-center font-semibold flex items-center justify-center"
+                    >
+                        {day}
+                    </div>
+                ))}
+
+                {/* Body */}
+                {hours.map(hour => (
+                    <>
+                        {/* Hour column */}
+                        <div
+                            key={hour}
+                            className="border text-right pr-2 text-sm flex items-center"
+                        >
+                            {hour}
+                        </div>
+
+                        {/* Day cells */}
+                        {days.map(day => (
+                            <div
+                                key={`${day}-${hour}`}
+                                className="border border-neutral-500 hover:bg-neutral-100 cursor-pointer"
+                            />
+                        ))}
+                    </>
+                ))}
+            </div>
 
         </section>
     )
