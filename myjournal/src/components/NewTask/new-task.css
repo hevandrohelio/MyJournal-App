@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.weekday_r_btn{
+    @apply rounded-full border w-10 h-10 ml-2 hover:bg-neutral-500;
+}
+.tasks_form_text{
+    @apply text-[30px];
+}
+.input_text{
+    @apply text-[20px]
+}
