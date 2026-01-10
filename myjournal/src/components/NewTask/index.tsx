@@ -3,15 +3,16 @@ import "./new-task.css"
 export function NewTask() {
     return (
         <div className="border w-100 h-100 p-2">
-            <h1 className="text-[40px]">New Task</h1>
-            <hr />
             <div>
                 <form action="">
+                    <input type="text"className="text-[40px] w-95" placeholder="New Task"/>
+                    <br />
+                    <hr />
                     <label htmlFor="date" className="tasks_form_text">Date: </label>
                     <input type="date" name="" id="" className="input_text" />
                     <br />
                     <label htmlFor="time" className="tasks_form_text">Time: </label>
-                    <input type="time" name="" id="" className="input_text" />
+                    <input type="time" name="" id="" className="input_text" /> - <input type="time" name="" id="" className="input_text"></input>
                     <br />
                     <label htmlFor="repeat" className="tasks_form_text">Repeat</label>
                     <div>
